@@ -227,3 +227,4 @@ __pycache__/
 
 # Raw single-cell data
 data/
+*.h5ad
