@@ -1,0 +1,4 @@
+Instructions for the reviewer: 
+link to huge files: https://drive.google.com/drive/folders/1giT5FnZd7GkM8tmG28j1EH73148zT201?usp=sharing
+
+certain files were too big to upload in githib so here is the drive link. due to limited space the raw merged file is not uploaded but the analysis can be done by the merged_qc_filtered.h5ad and normalized_hvg_regressed_scaled.h5ad depending upon where you want to start the analysis. besides this all other huge files are here and the raw data is given in the main folder bhaiyya shared. the first script can be run using jupyter lab if you download the raw files. the rest I would suggest to use colab as it was tough to run them locally using less RAM. 
