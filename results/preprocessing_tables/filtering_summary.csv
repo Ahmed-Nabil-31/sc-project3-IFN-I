@@ -1,0 +1,5 @@
+stage,cells,genes
+Raw merged data,101020,36601
+After basic QC,94513,36601
+After Scrublet doublet removal,87448,36601
+After gene filtering,87448,30744

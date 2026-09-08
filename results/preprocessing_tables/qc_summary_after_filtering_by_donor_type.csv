@@ -1,0 +1,3 @@
+donor_type,n_genes_by_counts,total_counts,pct_counts_mt,pct_counts_hb
+Healthy donor,2030.0,4202.0,5.0181456,0.0
+Patient,1952.0,4205.0,6.8043747,0.0
