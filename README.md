@@ -2,17 +2,17 @@
 
 ## Group-3 Members
 
-| Role | Name | Student ID | Email |
-|---|---|---|---|
-| **Group Leader** | **Suprokash Chakra Borty** | [Student ID] | suprokash.biochem@gmail.com |
-| Member | Ahmed Nabil | [Student ID] | an7274003@gmail.com |
-| Member | Md Osman Gani Bhuiyan | [Student ID] | mdosmanganibhuiyan@gmail.com |
-| Member | Farah Ulfat | [Student ID] | farahulfattasnim@gmail.com |
-| Member | Tahmeed Rezwan Shushmoy | [Student ID] | tahmeedrezwan555@gmail.com |
-| Member | Shirajum Munira Oyshi | [Student ID] | oyshidu3062@gmail.com |
-| Member | Tamanna Dilshad Phul | [Student ID] | tamannadilshad66@gmail.com |
-| Member | Zahura Nasreen Akash | [Student ID] | zahuranasreen28@gmail.com |
-| Member | Minhaz Abbasi | [Student ID] | mr.mahabub@gmail.com |
+| Role | Name | Email |
+|---|---|---|
+| Member | Suprokash Chakra Borty | suprokash.biochem@gmail.com |
+| Member | Ahmed Nabil | an7274003@gmail.com |
+| Member | Md Osman Gani Bhuiyan | mdosmanganibhuiyan@gmail.com |
+| Member | Farah Ulfat | farahulfattasnim@gmail.com |
+| Member | Tahmeed Rezwan Shushmoy | tahmeedrezwan555@gmail.com |
+| Member | Shirajum Munira Oyshi | oyshidu3062@gmail.com |
+| Member | Tamanna Dilshad Phul | tamannadilshad66@gmail.com |
+| Member | Zahura Nasreen Akash | zahuranasreen28@gmail.com |
+| Member | Minhaz Abbasi | mr.mahabub@gmail.com |
 
 
 
@@ -80,6 +80,7 @@ Raw 10x Genomics data
    - Calculate mitochondrial, ribosomal, and hemoglobin metrics.
    - Remove low-quality cells.
    - Remove genes detected in fewer than five cells.
+   - Calculate and remove doublets
 
 2. **Normalization and feature selection**
    - Store raw counts.
@@ -212,97 +213,13 @@ The analysis uses packages including:
 
 ## 5. Download the project data
 
-The complete single-cell dataset is too large to be stored directly in this GitHub repository.
-
-The project therefore provides the large files through the following Google Drive folder:
-
-**Project data and large files:**
-
-https://drive.google.com/drive/folders/1giT5FnZd7GkM8tmG28j1EH73148zT201?usp=sharing
-
-Download the required files and place them according to the project structure.
-
-For the first analysis stage, the raw 10x Genomics data should be available under:
-
-```text
-data/
-├── HD.../
-│   ├── matrix.mtx.gz
-│   ├── barcodes.tsv.gz
-│   └── features.tsv.gz
-├── ...
-└── patient_sample/
-    ├── matrix.mtx.gz
-    ├── barcodes.tsv.gz
-    └── features.tsv.gz
-```
-
-Each sample directory must contain a `matrix.mtx.gz` file so that the first script can automatically detect the sample.
-
-For later stages, the following processed files can be used to avoid repeating the most computationally expensive steps:
-
-```text
-merged_qc_filtered.h5ad
-normalized_hvg_regressed_scaled.h5ad
-clustering_res1.0.h5ad
-ifn_irc_scored.h5ad
-patient_irc_DE.h5ad
-IRC_High_vs_Low_DE.csv
-pathway_enrichment_results.csv
-```
+Download the project data from the drive provided initially from the drive folder provided by our mentor and save it accordingly following the github directory structure. 
 
 ---
 
 ## 6. Run the analysis
 
-The repository contains both notebooks and Python scripts:
-
-```text
-notebooks/
-scripts/
-results/
-report/
-```
-
-The scripts correspond to:
-
-```text
-01_data_loading_qc.py
-02_normalization_hvg.py
-03_dimensionality_reduction.py
-04_IRCscore.py
-05_pathway_enrichment.py
-```
-
-### Start Jupyter Lab
-
-```bash
-uv run jupyter lab
-```
-
-Then open the notebooks in the following order:
-
-```text
-01_data_loading_qc.ipynb
-02_normalization_hvg.ipynb
-03_dimensionality_reduction.ipynb
-04_IRCscore.ipynb
-05_pathway_enrichment.ipynb
-```
-
-### Recommended execution strategy
-
-The first stage can be run locally if the raw data are available:
-
-```bash
-uv run jupyter lab
-```
-
-For the later stages, the project workflow is designed to work well in **Google Colab**, particularly because the intermediate AnnData objects are large and the normalization, regression, PCA, clustering, and IRC analyses can require substantial RAM.
-
-If using Colab, upload/copy the processed `.h5ad` and `.csv` files to the expected project directory and execute the notebooks sequentially.
-
-> **Important:** The current notebooks contain some Google Colab/Google Drive-specific commands. Therefore, the README does not claim that every notebook can be executed directly with `uv run python` as a standalone script without modification.
+Open the notebooks folder and the run the analysis sequentially and you will get the necessary outputs. 
 
 ---
 
