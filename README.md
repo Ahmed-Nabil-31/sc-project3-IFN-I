@@ -4,8 +4,8 @@
 
 | Role | Name | Email |
 |---|---|---|
-| Member | Suprokash Chakra Borty | suprokash.biochem@gmail.com |
 | Member | Ahmed Nabil | an7274003@gmail.com |
+| Member | Suprokash Chakra Borty | suprokash.biochem@gmail.com |
 | Member | Md Osman Gani Bhuiyan | mdosmanganibhuiyan@gmail.com |
 | Member | Farah Ulfat | farahulfattasnim@gmail.com |
 | Member | Tahmeed Rezwan Shushmoy | tahmeedrezwan555@gmail.com |
