@@ -429,9 +429,15 @@ report/type-I-IFN-report-2.pdf
 
 The biological framework for the project is based on:
 
-**Boukhaled, G. M. et al. (2022). _Pre-encoded responsiveness to type I interferon in the peripheral immune system defines outcome of PD1 blockade therapy._ Nature Immunology, 23, 1273–1283.**
 
-DOI: `10.1038/s41590-022-01262-7`
+
+1. **Boukhaled, G. M. et al. (2022).** Pre-encoded responsiveness to type I interferon in the peripheral immune system defines outcome of PD1 blockade therapy. *Nature Immunology*, 23(8), 1273–1283. DOI: [10.1038/s41590-022-01262-7](https://doi.org/10.1038/s41590-022-01262-7)
+
+2. **Ayers, M. et al. (2017).** IFN-γ-related mRNA profile predicts clinical response to PD-1 blockade. *Journal of Clinical Investigation*, 127(8), 2930–2940. DOI: [10.1172/JCI91190](https://doi.org/10.1172/JCI91190)
+3. **Cristescu, R. et al. (2018).** Pan-tumor genomic biomarkers for PD-1 checkpoint blockade–based immunotherapy. *Science*, 362(6411), eaar3593. DOI: [10.1126/science.aar3593](https://doi.org/10.1126/science.aar3593)
+4. **Bengsch, B. et al. (2018).** Epigenomic-guided mass cytometry profiling reveals disease-specific features of exhausted CD8 T cells. *Immunity*, 48(5), 1029–1045. DOI: [10.1016/j.immuni.2018.04.026](https://doi.org/10.1016/j.immuni.2018.04.026)
+5. **Wolf, F. A., Angerer, P., & Theis, F. J. (2018).** SCANPY: large-scale single-cell gene expression data analysis. *Genome Biology*, 19, 15. DOI: [10.1186/s13059-017-1382-0](https://doi.org/10.1186/s13059-017-1382-0)
+6. **Virshup, I. et al. (2021).** anndata: Accessing and manipulating single-cell genomics data. *Bioinformatics*, 37(13), 1930–1931. DOI: [10.1093/bioinformatics/btab025](https://doi.org/10.1093/bioinformatics/btab025)
 
 ---
 
