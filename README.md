@@ -452,11 +452,27 @@ This project is distributed under the license included in the repository.
 In compliance with academic integrity guidelines and peer-review transparency policies, Generative AI tools were utilized during the research workflow, code refactoring, and documentation of this project.
 
 #### AI Tools & Usage
-* **Platform**: Gemini Notebook
+* **Platform**: ChatGPT, Gemini Notebook (assisted by underlying reasoning and development agent)
 * **Scope of Assistance**:
   * Assisting in structuring and writing project documentation (`README.md`).
   * Drafting point-by-point responses to peer-review evaluation comments (`peer_review/rebuttal_response.md`).
   * Summarizing scRNA-seq analysis steps, biological insights, and statistical criteria.
+
+#### Tool and Model Disclosure
+* **AI Tool**: ChatGPT, Gemini Notebook (assisted by the underlying reasoning and development agent).
+* **Core Role**: Assisted in report structuring, methods documentation, biological results translation, and critical methodology comparison between student and paper workflows. Commenting on codes and generating code for volcano plots and bar plots for pathway enrichment as there was no code in the guideline for this.
+
+#### Prompt and Purpose Log
+
+| Purpose of Submitted Prompt | Functionality |
+| :--- | :--- |
+| Give me code blocks of the script with comments | To understand the codes clearly |
+| ok tell me what to run to generate the barplot and volcano plot | To generate Figure 5 |
+| Generate me the submittable paper structure with my findings | The methods section and result section structure in the paper |
+| Discuss the findings based on the given rules | The discussion section |
+
+#### Student Verification Statement
+All AI-assisted outputs, descriptions, and structural elements were independently reviewed, cross-referenced with the source documents (01_data_loading_qc.docx through 05_pathway_enrichment.docx, what I did.docx, project3_guide.pdf, and paper.pdf), and validated for factual accuracy. Parameter choices and statistical interpretations have been fully validated, and we assume complete academic authorship over this report.
 
 #### Gemini Notebook Links
 * **Notebook 1**: [Gemini Notebook Workspace 1](https://notebook.google.com/notebook/80397027-b5dc-491c-aa19-e757b33dfe9b)
