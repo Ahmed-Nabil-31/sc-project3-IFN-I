@@ -213,7 +213,9 @@ The analysis uses packages including:
 
 ## 5. Download the project data
 
-Download the project data from the drive provided initially from the drive folder provided by our mentor and save it accordingly following the github directory structure. 
+Download the project data from: 
+https://drive.google.com/drive/folders/1sCh1639aTS27CTNg3iAjkbOj9-1kfay3
+(Go inside the `'data'` folder from the above link and download all from that folder and save it accordingly following the github directory structure.) 
 
 ---
 
