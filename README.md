@@ -438,3 +438,20 @@ DOI: `10.1038/s41590-022-01262-7`
 # License
 
 This project is distributed under the license included in the repository.
+
+---
+
+### Appendix: AI Usage Disclosure
+
+In compliance with academic integrity guidelines and peer-review transparency policies, Generative AI tools were utilized during the research workflow, code refactoring, and documentation of this project.
+
+#### AI Tools & Usage
+* **Platform**: Gemini Notebook
+* **Scope of Assistance**:
+  * Assisting in structuring and writing project documentation (`README.md`).
+  * Drafting point-by-point responses to peer-review evaluation comments (`peer_review/rebuttal_response.md`).
+  * Summarizing scRNA-seq analysis steps, biological insights, and statistical criteria.
+
+#### Gemini Notebook Links
+* **Notebook 1**: [Gemini Notebook Workspace 1](https://notebook.google.com/notebook/80397027-b5dc-491c-aa19-e757b33dfe9b)
+* **Notebook 2**: [Gemini Notebook Workspace 2](https://notebook.google.com/notebook/7c5c18b6-e1b5-4df5-b8b6-6d1462dbd780)
