@@ -19,10 +19,7 @@ Below, we provide our point-by-point responses detailing the analytical modifica
 > *Reviewer Comment*: "QC detects gene count, hemoglobin%, and mito% but does not include a doublet detection step. After filtering, the very high total_counts values increase the possibility that there are some doublets."
 
 **Author Response**:  
-We thank the reviewers for pointing out this critical QC requirement. In our updated pipeline (`scripts/01_data_loading_qc.py`), we integrated Scrublet (`scanpy.pp.scrublet`) to compute doublet scores per sample batch. Cells flagged as doublets alongside those exceeding upper total count thresholds (>30,000 UMIs) were filtered out prior to downstream normalization. This step removed 3,120 doublets, leaving high-quality single cells for cell-type clustering and IRC scoring.
-
-**Manuscript Revisions (Section 3.1 & 3.2)**:  
-> *"Quality control included sample-level doublet detection using Scrublet (`expected_doublet_rate=0.06`). Predicted doublets and cells with extreme UMI counts (>30,000) were removed alongside high mitochondrial (>15%) and hemoglobin (>1%) cells."*
+We thank the reviewers for highlighting this important QC requirement. In our updated pipeline (scripts/01_data_loading_qc.py), we integrated Scrublet-based doublet detection independently for each sample. Scrublet doublet scores and predicted doublet labels were generated from the observed count matrices, and predicted doublets were removed prior to downstream normalization and clustering. This step removed 7,065 predicted doublets, reducing the dataset from 94,513 cells after basic QC to 87,448 cells. We additionally filtered cells with fewer than 300 detected genes, mitochondrial transcript content ≥15%, and hemoglobin transcript content ≥5%. No fixed upper UMI-count threshold was applied.
 
 ---
 
@@ -32,7 +29,7 @@ We thank the reviewers for pointing out this critical QC requirement. In our upd
 > *Reviewer Comment*: "The figures could be neatly organized, and more labeling would be useful."
 
 **Author Response**:  
-We restructured the output directory (`results/figures/`) into sequential stage sub-folders (`01_qc`, `02_norm`, `03_dimred`, `04_irc`, `05_pathways`). We also added explicit lineage text labels directly onto the UMAP embeddings (`sc.pl.umap(..., legend_loc='on data')`) and increased font sizes for axes and legends.
+We restructured the output directory (`results/figures/`) into sequential stage sub-folders (`01_qc`, `02_norm`, `03_dimred`, `04_irc`, `05_pathways`). Since the main labeling issue was the volcano plot that labelled the top genes, a table was provided just below it with the names of the top genes and there parameters. 
 
 ---
 
@@ -40,7 +37,7 @@ We restructured the output directory (`results/figures/`) into sequential stage 
 > *Reviewer Comment*: "The figure captions are quite lengthy and repetitive."
 
 **Author Response**:  
-We revised all figure captions in the manuscript to be concise and focused on key biological takeaways, eliminating redundant descriptions of software methods.
+We revised all figure captions in the manuscript to be concise and shortened them. Their description was explained in the discussion part rather then their captions, which were primarily in the Results section. 
 
 ---
 
@@ -48,7 +45,7 @@ We revised all figure captions in the manuscript to be concise and focused on ke
 > *Reviewer Comment*: "The reference section citation style is inconsistent."
 
 **Author Response**:  
-We standardized all references in the bibliography and in-text citations to conform strictly to Nature Immunology guidelines (e.g., *Boukhaled et al. (2022)*).
+We standardized all references in the bibliography and in-text citations in APA 7th format.
 
 ---
 
@@ -66,7 +63,7 @@ We corrected the typographical error in Section 2.5 of the report text from "Ben
 > *Reviewer Comment*: "There were some Google Drive/Google Colab paths provided, which caused issues during installation. Due to these errors, we were unable to run the notebook properly and generate figures and tables."
 
 **Author Response**:  
-We apologize for the execution failure caused by residual Colab/Drive path references. All notebooks and scripts in `scripts/` and `notebooks/` have been refactored to use dynamic, relative paths (`pathlib.Path`). We verified clean end-to-end execution within a fresh `uv` environment (`uv venv` and `uv pip install -r requirements.txt`) on a standard local machine.
+We apologize for the execution failure caused by residual Colab/Drive path references. All notebooks and scripts in `scripts/` and `notebooks/` have been refactored to use dynamic, relative paths (`pathlib.Path`). We verified clean end-to-end execution within a fresh `uv` environment (`uv venv` and `uv pip install -r requirements.txt`) on a standard local machine. **(Just run the notebook folders sequentially after downloading the main data provided by our mentor and place it in a folder named data, within your local repository. As they contain huge files, they are excluded from the github repository.)**
 
 ---
 
@@ -80,4 +77,4 @@ All code updates, structured figures, and manuscript revisions have been pushed 
 
 Sincerely,  
 **Group 3 Project Team**  
-*(Suprokash Chakra Borty, Ahmed Nabil, Md Osman Gani Bhuiyan, Shirajum Munira Oyshi, Farah Ulfat, Tahmeed Rezwan Shushmoy, Tamanna Dilshad Phul, Zahura Nasreen Akash, Minhaz Abbasi)*
+*(Ahmed Nabil, Suprokash Chakra Borty, Md Osman Gani Bhuiyan, Shirajum Munira Oyshi, Farah Ulfat, Tahmeed Rezwan Shushmoy, Tamanna Dilshad Phul, Zahura Nasreen Akash, Minhaz Abbasi)*
