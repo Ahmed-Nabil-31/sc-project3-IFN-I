@@ -63,7 +63,17 @@ We corrected the typographical error in Section 2.5 of the report text from "Ben
 > *Reviewer Comment*: "There were some Google Drive/Google Colab paths provided, which caused issues during installation. Due to these errors, we were unable to run the notebook properly and generate figures and tables."
 
 **Author Response**:  
-We apologize for the execution failure caused by residual Colab/Drive path references. All notebooks and scripts in `scripts/` and `notebooks/` have been refactored to use dynamic, relative paths (`pathlib.Path`). We verified clean end-to-end execution within a fresh `uv` environment (`uv venv` and `uv pip install -r requirements.txt`) on a standard local machine. **(Just run the notebook folders sequentially after downloading the main data provided by our mentor and place it in a folder named data, within your local repository. As they contain huge files, they are excluded from the github repository.)**
+We apologize for the execution failure caused by residual Colab/Drive path references. All notebooks and scripts in `scripts/` and `notebooks/` have been refactored to use dynamic, relative paths (`pathlib.Path`). We verified clean end-to-end execution within a fresh `uv` environment (`uv venv` and `uv pip install -r requirements.txt`) on a standard local machine. 
+
+**Firstly, clone our repository and recreate the exact environment:**
+
+git clone https://github.com/Ahmed-Nabil-31/sc-project3-IFN-I.git
+cd sc-project3-IFN-I
+uv venv
+source .venv/bin/activate # (.venv\Scripts\Activate.ps1 on Windows)
+uv pip install -r requirements.txt
+
+**Then just run the notebook folders sequentially after downloading the main data provided by our mentor and place it in a folder named data, within your local repository. As they contain huge files, they are excluded from the github repository.**
 
 ---
 
