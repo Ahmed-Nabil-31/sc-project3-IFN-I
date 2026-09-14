@@ -67,11 +67,13 @@ We apologize for the execution failure caused by residual Colab/Drive path refer
 
 **Firstly, clone our repository and recreate the exact environment:**
 
+```bash
 git clone https://github.com/Ahmed-Nabil-31/sc-project3-IFN-I.git
 cd sc-project3-IFN-I
 uv venv
-source .venv/bin/activate # (.venv\Scripts\Activate.ps1 on Windows)
+source .venv/bin/activate  # (.venv\Scripts\Activate.ps1 on Windows)
 uv pip install -r requirements.txt
+```
 
 **Then just run the notebook folders sequentially after downloading the main data provided by our mentor and place it in a folder named data, within your local repository. As they contain huge files, they are excluded from the github repository.**
 
