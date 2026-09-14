@@ -350,6 +350,18 @@ sc-project3-IFN-I/
 │   ├── 04_IRCscore.ipynb
 │   └── 05_pathway_enrichment.ipynb
 │
+├── peer_review/
+│   └── rebuttal_response.md
+│
+├── report/
+│   ├── type-I-IFN-report-2.pdf
+│   ├── Final.docx
+│   └── Final.pdf
+│
+├── results/
+│   ├── figures/
+│   └── preprocessing_tables/
+│
 ├── scripts/
 │   ├── 01_data_loading_qc.py
 │   ├── 02_normalization_hvg.py
@@ -357,18 +369,10 @@ sc-project3-IFN-I/
 │   ├── 04_IRCscore.py
 │   └── 05_pathway_enrichment.py
 │
-├── results/
-│   ├── figures/
-│   └── preprocessing_tables/
-│
-├── report/
-│   └── type-I-IFN-report-2.pdf
-│   └── Final.docx
-│   └── Final.pdf
-│
-├── requirements.txt
+├── .gitignore
 ├── LICENSE
-└── README.md
+├── README.md
+└── requirements.txt
 ```
 
 ---
